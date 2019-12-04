@@ -1,0 +1,5 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+.app-overlay {
+    -fx-background-color: #18191c;
+    -fx-opacity: 0.75;
+}

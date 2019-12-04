@@ -1,0 +1,23 @@
+<factorypath>
+    <factorypathentry kind="VARJAR" id="M2_REPO/asm/asm/3.3.1/asm-3.3.1.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/asm/asm-commons/3.3.1/asm-commons-3.3.1.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/asm/asm-tree/3.3.1/asm-tree-3.3.1.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/commons-logging/commons-logging/1.2/commons-logging-1.2.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/org/apache/logging/log4j/log4j-core/2.12.1/log4j-core-2.12.1.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/org/apache/logging/log4j/log4j-api/2.12.1/log4j-api-2.12.1.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/com/typesafe/config/1.4.0/config-1.4.0.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/org/openjfx/javafx-controls/11/javafx-controls-11.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/org/openjfx/javafx-controls/11/javafx-controls-11-win.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/org/openjfx/javafx-graphics/11/javafx-graphics-11.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/org/openjfx/javafx-media/11/javafx-media-11-win.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/org/openjfx/javafx-media/11/javafx-media-11-mac.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/org/openjfx/javafx-media/11/javafx-media-11-linux.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/org/openjfx/javafx-graphics/11/javafx-graphics-11-win.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/org/openjfx/javafx-base/11/javafx-base-11.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/org/openjfx/javafx-base/11/javafx-base-11-win.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/org/openjfx/javafx-graphics/11/javafx-graphics-11-mac.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/org/openjfx/javafx-graphics/11/javafx-graphics-11-linux.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/org/openjfx/javafx-fxml/11/javafx-fxml-11.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/org/openjfx/javafx-fxml/11/javafx-fxml-11-win.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/com/jfoenix/jfoenix/9.0.9/jfoenix-9.0.9.jar" enabled="true" runInBatchMode="false"/>
+</factorypath>

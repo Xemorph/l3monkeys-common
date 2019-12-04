@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import org.l3monkeys.collection.components.base.windownavigation.*?>
+
+
+<fx:root type="org.l3monkeys.collection.components.base.WindowNavigation" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+     <JFXButton fx:id="btn_minimize" contentDisplay="GRAPHIC_ONLY" style="-jfx-disable-visual-focus: true;" styleClass="btn_minimize">
+        <graphic>
+           <SVGPath content="M1,6H11V7H1Z" fill="WHITE" fillRule="EVEN_ODD" />
+        </graphic>
+        <cursor>
+           <Cursor fx:constant="HAND" />
+        </cursor>
+     </JFXButton>
+     <JFXButton fx:id="btn_maximize" contentDisplay="GRAPHIC_ONLY" disable="true" ripplerFill="#88929900" style="-jfx-disable-visual-focus: true;">
+        <cursor>
+           <Cursor fx:constant="HAND" />
+        </cursor>
+        <graphic>
+           <SVGPath content="M1.5,1.5h9v9h-9Z" fill="#ffffff00" fillRule="EVEN_ODD" stroke="WHITE" strokeType="INSIDE" />
+        </graphic>
+     </JFXButton>
+     <JFXButton fx:id="btn_close" contentDisplay="GRAPHIC_ONLY" ripplerFill="#f04848" style="-jfx-disable-visual-focus: true;" styleClass="btn_close">
+        <graphic>
+           <SVGPath content="M11 1.576 6.583 6 11 10.424 10.424 11 6 6.583 1.576 11 1 10.424 5.417 6 1 1.576 1.576 1 6 5.417 10.424 1z" depthTest="DISABLE" fill="WHITE" fillRule="EVEN_ODD" />
+        </graphic>
+        <cursor>
+           <Cursor fx:constant="HAND" />
+        </cursor>
+     </JFXButton>
+   </children>
+</fx:root>

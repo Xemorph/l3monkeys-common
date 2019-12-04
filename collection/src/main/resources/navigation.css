@@ -1,0 +1,22 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+.btn_close:hover {
+    -fx-background-color: #f04747;
+    -fx-background-radius: 0;
+}
+.btn_minimize:hover {
+    -fx-background-color: #889299;
+    -fx-background-radius: 0;
+}
+
+.btn_library {
+    -jfx-disable-visual-focus: true;
+    -fx-background-color: rgba(0,0,0,0);
+}
+.btn_library:hover {
+    -jfx-disable-visual-focus: true;
+    -fx-background-color: rgba(0,0,0,0.3);
+    -fx-border-radius: 3.0;
+}
+.btn_library .jfx-rippler {
+    -jfx-rippler-fill: rgba(0,0,0,0.3);
+}

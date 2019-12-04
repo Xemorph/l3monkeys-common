@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.lang.Double?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Polygon?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="940.0" style="-fx-background-color: #18191c;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>    
+      <Pane layoutX="-5.0" opacity="0.6" prefHeight="23.0" prefWidth="71.0">
+         <children>
+            <SVGPath content="M.73,85.08A10.42,10.42,0,0,1,0,82.41Q0,42.55.07,2.69C.08.59.4.27,2.45.26c3.48,0,7,.06,10.44,0a4.11,4.11,0,0,1,4.05,2.35C22.55,12.43,28.23,22.23,33.89,32l.91,1.55c1.29,2.18,1.8,2.17,3.11-.08.58-1,1.14-2,1.71-3q8.13-14.09,16.25-28.2A3.67,3.67,0,0,1,59.32.27c3.66,0,7.32,0,11,0,1.56,0,2.3.58,2.3,2.23q0,40.22,0,80.45c0,.71-.64,1.42-1,2.14H60.13a10,10,0,0,1-.95-2.9q-.06-26.9,0-53.79a10.48,10.48,0,0,0,0-1.62c0-.31-.28-.8-.49-.83a1.4,1.4,0,0,0-1.06.35,6.47,6.47,0,0,0-.86,1.36l-15,26.19c-1.31,2.29-2.6,4.58-3.94,6.85-1,1.76-1.89,1.74-3,0-.13-.2-.24-.42-.36-.62q-9.17-16-18.37-31.94a14.22,14.22,0,0,0-2-2.24,14.16,14.16,0,0,0-.64,3c0,17.69.08,35.38.07,53.07a12.14,12.14,0,0,1-.88,3.15Zm219.71,0a10.6,10.6,0,0,0,.91-2.93q.12-29.6.12-59.21c0-5.84,3.3-9.17,9.12-9.18,4.8,0,9.6,0,14.4,0,1.45,0,2.06-.56,2-2-.05-3.06-.07-6.12,0-9.18,0-1.7-.62-2.35-2.32-2.35q-30,0-59.93,0c-1.73,0-2.37.77-2.35,2.4,0,2.88,0,5.76,0,8.64,0,2.18.34,2.5,2.5,2.5h19.8c2.88,0,3.21.33,3.21,3.19,0,21.6,0,43.19.11,64.79,0,1.12.8,2.24,1.22,3.35Zm114.71,0a7.4,7.4,0,0,0,.93-2.4q.06-40,0-80.06c0-1.92-.51-2.37-2.5-2.38q-4.23,0-8.46,0c-2.3,0-2.54.24-2.54,2.61q0,15,0,30c0,2.42-.54,2.94-3,2.94-4.5,0-9,0-13.49,0-1.64,0-2.25.65-2.22,2.25.06,3.12,0,6.24,0,9.36,0,1.35.58,2,1.95,2,2.52,0,5,0,7.56,0,5.88,0,9.14,3.25,9.15,9.11,0,8,0,16,0,23.93a11.45,11.45,0,0,0,.67,2.68Zm-51.12,0a9,9,0,0,0,.95-2.72c.06-15.42.05-30.84.05-46.26q0-16.65,0-33.3c0-2.28-.31-2.57-2.61-2.58q-4.23,0-8.46,0c-2.06,0-2.42.36-2.42,2.39q0,40,0,79.91a8,8,0,0,0,.94,2.54Zm-178.5-.85c1.79-.09,2.48-.84,2.94-2.45,1.85-6.49,3.8-12.95,5.72-19.42.85-2.88,1.52-3.37,4.62-3.38H132c5.34,0,9,2.74,10.53,7.83s3.17,10.44,4.69,15.68c.39,1.34.95,2.11,2.48,2.14,4.09.06,8.19.22,12.28.4,1.9.08,2.38-.54,1.83-2.43-2.37-8.06-4.59-16.16-6.91-24.23C151.58,40,146.23,21.55,141,3.12,140.32.89,139.2-.09,136.83,0c-3.52.15-7.05,0-10.58,0-2.78,0-3.08.37-2.32,3q5.14,17.68,10.29,35.36c1.07,3.7.55,4.4-3.22,4.4-8.28,0-16.56.06-24.84,0-2.24,0-3.37.74-4,2.95-3.28,11.75-6.7,23.47-10,35.2-.38,1.34-.67,2.71-1.08,4.41C96.14,84.91,100.83,84.46,105.53,84.23ZM.73,85.08A10.42,10.42,0,0,1,0,82.41Q0,42.55.07,2.69C.08.59.4.27,2.45.26c3.48,0,7,.06,10.44,0a4.11,4.11,0,0,1,4.05,2.35C22.55,12.43,28.23,22.23,33.89,32l.91,1.55c1.29,2.18,1.8,2.17,3.11-.08.58-1,1.14-2,1.71-3q8.13-14.09,16.25-28.2A3.67,3.67,0,0,1,59.32.27c3.66,0,7.32,0,11,0,1.56,0,2.3.58,2.3,2.23q0,40.22,0,80.45c0,.71-.64,1.42-1,2.14H60.13a10,10,0,0,1-.95-2.9q-.06-26.9,0-53.79a10.48,10.48,0,0,0,0-1.62c0-.31-.28-.8-.49-.83a1.4,1.4,0,0,0-1.06.35,6.47,6.47,0,0,0-.86,1.36l-15,26.19c-1.31,2.29-2.6,4.58-3.94,6.85-1,1.76-1.89,1.74-3,0-.13-.2-.24-.42-.36-.62q-9.17-16-18.37-31.94a14.22,14.22,0,0,0-2-2.24,14.16,14.16,0,0,0-.64,3c0,17.69.08,35.38.07,53.07a12.14,12.14,0,0,1-.88,3.15Zm219.71,0a10.6,10.6,0,0,0,.91-2.93q.12-29.6.12-59.21c0-5.84,3.3-9.17,9.12-9.18,4.8,0,9.6,0,14.4,0,1.45,0,2.06-.56,2-2-.05-3.06-.07-6.12,0-9.18,0-1.7-.62-2.35-2.32-2.35q-30,0-59.93,0c-1.73,0-2.37.77-2.35,2.4,0,2.88,0,5.76,0,8.64,0,2.18.34,2.5,2.5,2.5h19.8c2.88,0,3.21.33,3.21,3.19,0,21.6,0,43.19.11,64.79,0,1.12.8,2.24,1.22,3.35Zm114.71,0a7.4,7.4,0,0,0,.93-2.4q.06-40,0-80.06c0-1.92-.51-2.37-2.5-2.38q-4.23,0-8.46,0c-2.3,0-2.54.24-2.54,2.61q0,15,0,30c0,2.42-.54,2.94-3,2.94-4.5,0-9,0-13.49,0-1.64,0-2.25.65-2.22,2.25.06,3.12,0,6.24,0,9.36,0,1.35.58,2,1.95,2,2.52,0,5,0,7.56,0,5.88,0,9.14,3.25,9.15,9.11,0,8,0,16,0,23.93a11.45,11.45,0,0,0,.67,2.68Zm-51.12,0a9,9,0,0,0,.95-2.72c.06-15.42.05-30.84.05-46.26q0-16.65,0-33.3c0-2.28-.31-2.57-2.61-2.58q-4.23,0-8.46,0c-2.06,0-2.42.36-2.42,2.39q0,40,0,79.91a8,8,0,0,0,.94,2.54Zm-178.5-.85c1.79-.09,2.48-.84,2.94-2.45,1.85-6.49,3.8-12.95,5.72-19.42.85-2.88,1.52-3.37,4.62-3.38H132c5.34,0,9,2.74,10.53,7.83s3.17,10.44,4.69,15.68c.39,1.34.95,2.11,2.48,2.14,4.09.06,8.19.22,12.28.4,1.9.08,2.38-.54,1.83-2.43-2.37-8.06-4.59-16.16-6.91-24.23C151.58,40,146.23,21.55,141,3.12,140.32.89,139.2-.09,136.83,0c-3.52.15-7.05,0-10.58,0-2.78,0-3.08.37-2.32,3q5.14,17.68,10.29,35.36c1.07,3.7.55,4.4-3.22,4.4-8.28,0-16.56.06-24.84,0-2.24,0-3.37.74-4,2.95-3.28,11.75-6.7,23.47-10,35.2-.38,1.34-.67,2.71-1.08,4.41C96.14,84.91,100.83,84.46,105.53,84.23Z" fill="WHITE" layoutX="-132.0" layoutY="-31.0" scaleX="0.14" scaleY="0.14" />
+         </children>
+      </Pane>
+      <org.l3monkeys.collection.components.base.WindowNavigation alignment="CENTER" layoutX="862.0" prefHeight="22.0" prefWidth="78.0" style="-fx-background-color: rgba(0,0,0,0.3); -fx-position-shape: fixed;">
+          <children>
+            <JFXButton />
+            <JFXButton />
+            <JFXButton />
+        </children>
+      </org.l3monkeys.collection.components.base.WindowNavigation>
+      <BorderPane layoutX="222.0" layoutY="129.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="24.0">
+         <right>
+            <VBox alignment="CENTER" minWidth="50.0" prefHeight="517.0" prefWidth="50.0" BorderPane.alignment="CENTER_RIGHT">
+               <children>
+                  <JFXButton fx:id="btn_library" alignment="CENTER" graphicTextGap="8.0" maxHeight="50.0" minWidth="100.0" rotate="90.0" text="Library" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font name="Lato Medium" size="16.0" />
+                     </font>
+                     <graphic>
+                        <SVGPath content="M5.79335761,5 L18.2066424,5 C19.7805584,5 21.0868816,6.21634264 21.1990185,7.78625885 L21.8575059,17.0050826 C21.9307825,18.0309548 21.1585512,18.9219909 20.132679,18.9952675 C20.088523,18.9984215 20.0442685,19 20,19 C18.8245863,19 17.8000084,18.2000338 17.5149287,17.059715 L17,15 L7,15 L6.48507125,17.059715 C6.19999155,18.2000338 5.1754137,19 4,19 C2.97151413,19 2.13776159,18.1662475 2.13776159,17.1377616 C2.13776159,17.0934931 2.1393401,17.0492386 2.1424941,17.0050826 L2.80098151,7.78625885 C2.91311838,6.21634264 4.21944161,5 5.79335761,5 Z M14.5,10 C15.3284271,10 16,9.32842712 16,8.5 C16,7.67157288 15.3284271,7 14.5,7 C13.6715729,7 13,7.67157288 13,8.5 C13,9.32842712 13.6715729,10 14.5,10 Z M18.5,13 C19.3284271,13 20,12.3284271 20,11.5 C20,10.6715729 19.3284271,10 18.5,10 C17.6715729,10 17,10.6715729 17,11.5 C17,12.3284271 17.6715729,13 18.5,13 Z M6,9 L4,9 L4,11 L6,11 L6,13 L8,13 L8,11 L10,11 L10,9 L8,9 L8,7 L6,7 L6,9 Z" fill="WHITE" rotate="-90.0" />
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+               </children>
+            </VBox>
+         </right>
+         <bottom>
+            <HBox alignment="CENTER" prefWidth="824.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Polygon fx:id="arrow_left" fill="#1f93ff00" rotate="-90.0" stroke="WHITE" strokeType="INSIDE">
+                    <points>
+                      <Double fx:value="13.0" />
+                      <Double fx:value="20.0" />
+                      <Double fx:value="11.0" />
+                      <Double fx:value="20.0" />
+                      <Double fx:value="11.0" />
+                      <Double fx:value="8.0" />
+                      <Double fx:value="5.5" />
+                      <Double fx:value="13.5" />
+                      <Double fx:value="4.08" />
+                      <Double fx:value="12.08" />
+                      <Double fx:value="12.0" />
+                      <Double fx:value="4.16" />
+                      <Double fx:value="19.92" />
+                      <Double fx:value="12.08" />
+                      <Double fx:value="18.5" />
+                      <Double fx:value="13.5" />
+                      <Double fx:value="13.0" />
+                      <Double fx:value="8.0" />
+                    </points>
+                     <HBox.margin>
+                        <Insets right="8.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Polygon>
+                  <HBox fx:id="heroCarouselHolder" alignment="BOTTOM_CENTER" fillHeight="false" spacing="8.0">
+                      <children>
+                        <org.l3monkeys.collection.components.carousel.pagination.PaginationItem gamecardImage="testBG.png">
+                        </org.l3monkeys.collection.components.carousel.pagination.PaginationItem>
+                        <org.l3monkeys.collection.components.carousel.pagination.PaginationItem gamecardImage="testBG.png">
+                        </org.l3monkeys.collection.components.carousel.pagination.PaginationItem>
+                        <org.l3monkeys.collection.components.carousel.pagination.PaginationItem gamecardImage="testBG.png">
+                        </org.l3monkeys.collection.components.carousel.pagination.PaginationItem>
+                        <org.l3monkeys.collection.components.carousel.pagination.PaginationItem gamecardImage="testBG.png">
+                        </org.l3monkeys.collection.components.carousel.pagination.PaginationItem>
+                        <org.l3monkeys.collection.components.carousel.pagination.PaginationItem gamecardImage="testBG.png">
+                        </org.l3monkeys.collection.components.carousel.pagination.PaginationItem>
+                      </children>
+                  </HBox>
+                  <Polygon fx:id="arrow_right" fill="#1f93ff00" layoutX="468.0" layoutY="48.0" rotate="90.0" stroke="WHITE" strokeType="INSIDE">
+                     <points>
+                        <Double fx:value="13.0" />
+                        <Double fx:value="20.0" />
+                        <Double fx:value="11.0" />
+                        <Double fx:value="20.0" />
+                        <Double fx:value="11.0" />
+                        <Double fx:value="8.0" />
+                        <Double fx:value="5.5" />
+                        <Double fx:value="13.5" />
+                        <Double fx:value="4.08" />
+                        <Double fx:value="12.08" />
+                        <Double fx:value="12.0" />
+                        <Double fx:value="4.16" />
+                        <Double fx:value="19.92" />
+                        <Double fx:value="12.08" />
+                        <Double fx:value="18.5" />
+                        <Double fx:value="13.5" />
+                        <Double fx:value="13.0" />
+                        <Double fx:value="8.0" />
+                     </points>
+                     <HBox.margin>
+                        <Insets left="8.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Polygon>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets bottom="10.0" />
+               </padding>
+            </HBox>
+         </bottom>
+         <center>
+            <StackPane prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="TOP_CENTER">
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+               <children>
+                  <ImageView fx:id="backgroundPreview" fitWidth="840.0" pickOnBounds="true" preserveRatio="true" StackPane.alignment="CENTER">
+                  </ImageView>
+                  <Rectangle fx:id="lgLR" fill="DODGERBLUE" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="840.0" StackPane.alignment="TOP_CENTER" />
+                  <Rectangle fx:id="lgTB" fill="#1f93ff" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="840.0" StackPane.alignment="BOTTOM_CENTER" />
+               </children>
+            </StackPane>
+         </center>
+         <left>
+            <VBox minWidth="50.0" prefHeight="200.0" prefWidth="50.0" BorderPane.alignment="CENTER" />
+         </left>
+      </BorderPane>
+   </children>
+</AnchorPane>
