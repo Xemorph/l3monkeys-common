@@ -3,9 +3,8 @@ package org.l3monkeys.games.dummygame;
 import org.l3monkeys.gameloader.GameInterface;
 
 import javafx.scene.image.Image;
-import javafx.stage.Stage;
 
-public class DummyGame extends Stage implements GameInterface {
+public class DummyGameInterface implements GameInterface {
 
     @Override
     public String getGameTitle() {
@@ -30,6 +29,8 @@ public class DummyGame extends Stage implements GameInterface {
     @Override
     public void launchGame() {
         System.out.println("Launching Dummy Game");
+
+        new MainWindow();
     }
 
 }

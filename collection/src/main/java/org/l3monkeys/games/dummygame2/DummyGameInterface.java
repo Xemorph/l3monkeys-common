@@ -1,11 +1,11 @@
 package org.l3monkeys.games.dummygame2;
 
 import org.l3monkeys.gameloader.GameInterface;
+import org.l3monkeys.games.dummygame2.MainWindow;
 
 import javafx.scene.image.Image;
-import javafx.stage.Stage;
 
-public class DummyGame2 extends Stage implements GameInterface {
+public class DummyGameInterface implements GameInterface {
 
     @Override
     public String getGameTitle() {
@@ -30,6 +30,8 @@ public class DummyGame2 extends Stage implements GameInterface {
     @Override
     public void launchGame() {
         System.out.println("Launching Dummy Game 2");
+
+        new MainWindow();
     }
 
 }
