@@ -16,6 +16,8 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.shape.SVGPath?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.control.Button?>
+<?import java.net.URL?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="940.0" style="-fx-background-color: #18191c;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>    
@@ -82,16 +84,6 @@
                   </Polygon>
                   <HBox fx:id="heroCarouselHolder" alignment="BOTTOM_CENTER" fillHeight="false" spacing="8.0">
                       <children>
-                        <org.l3monkeys.collection.components.carousel.pagination.PaginationItem gamecardImage="testBG.png">
-                        </org.l3monkeys.collection.components.carousel.pagination.PaginationItem>
-                        <org.l3monkeys.collection.components.carousel.pagination.PaginationItem gamecardImage="testBG.png">
-                        </org.l3monkeys.collection.components.carousel.pagination.PaginationItem>
-                        <org.l3monkeys.collection.components.carousel.pagination.PaginationItem gamecardImage="testBG.png">
-                        </org.l3monkeys.collection.components.carousel.pagination.PaginationItem>
-                        <org.l3monkeys.collection.components.carousel.pagination.PaginationItem gamecardImage="testBG.png">
-                        </org.l3monkeys.collection.components.carousel.pagination.PaginationItem>
-                        <org.l3monkeys.collection.components.carousel.pagination.PaginationItem gamecardImage="testBG.png">
-                        </org.l3monkeys.collection.components.carousel.pagination.PaginationItem>
                       </children>
                   </HBox>
                   <Polygon fx:id="arrow_right" fill="#1f93ff00" layoutX="468.0" layoutY="48.0" rotate="90.0" stroke="WHITE" strokeType="INSIDE">
@@ -141,6 +133,7 @@
                   </ImageView>
                   <Rectangle fx:id="lgLR" fill="DODGERBLUE" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="840.0" StackPane.alignment="TOP_CENTER" />
                   <Rectangle fx:id="lgTB" fill="#1f93ff" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="840.0" StackPane.alignment="BOTTOM_CENTER" />
+                  <JFXButton fx:id="playButton" text="Play now" StackPane.alignment="BOTTOM_RIGHT" />
                </children>
             </StackPane>
          </center>
