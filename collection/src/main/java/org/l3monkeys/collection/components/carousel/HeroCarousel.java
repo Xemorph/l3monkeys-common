@@ -134,7 +134,6 @@ public class HeroCarousel {
         this.arrow_right.addEventHandler(MouseEvent.MOUSE_CLICKED, this::slideRight);
 
         this.btn_play.setOnAction((event) -> {
-
         });
     }
 
