@@ -52,6 +52,7 @@ public class Collection extends Application {
             // Load Stylesheets
             scene.getStylesheets().add(getClass().getResource("/base.css").toExternalForm());
             scene.getStylesheets().add(getClass().getResource("/navigation.css").toExternalForm());
+            scene.getStylesheets().add(getClass().getResource("/buttons.css").toExternalForm());
 
             // Load scene templates for the application while the Stage object is accessible
             controller.addScreen("dashboard", new Function<URL, Parent>() {
