@@ -2,9 +2,6 @@ package org.l3monkeys.collection.components.carousel.pagination;
 
 import org.l3monkeys.collection.Collection;
 
-import javafx.beans.NamedArg;
-import javafx.beans.property.SimpleStringProperty;
-import javafx.beans.property.StringProperty;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.image.Image;

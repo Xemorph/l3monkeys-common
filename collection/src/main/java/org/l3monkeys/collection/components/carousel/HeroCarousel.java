@@ -15,6 +15,7 @@ import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
@@ -129,6 +130,13 @@ public class HeroCarousel {
         for (GameInterface gameInterface : gameInterfaces) {
             GamePaginationItem paginationItem = new GamePaginationItem(gameInterface);
 
+            paginationItem.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
+                @Override
+                public void handle(MouseEvent event) {
+                    activeGameCard.set(gamePagination.indexOf(paginationItem) + 1);
+                }
+            });
+
             gamePagination.add(paginationItem);
             heroCarouselHolder.getChildren().add(paginationItem);
         }
@@ -158,7 +166,7 @@ public class HeroCarousel {
         if (HeroCarousel.activeGameCard.get() == 1)
             return;
         // Go to the next GameCard - DIRECTION: LEFT
-        HeroCarousel.activeGameCard.set(HeroCarousel.activeGameCard.get() - STEP);
+        activeGameCard.set(HeroCarousel.activeGameCard.get() - STEP);
 
     }
 
@@ -167,7 +175,7 @@ public class HeroCarousel {
         if (HeroCarousel.activeGameCard.get() == HeroCarousel.gamePagination.size())
             return;
         // Go to the next GameCard - DIRECTION: RIGHT
-        HeroCarousel.activeGameCard.set(HeroCarousel.activeGameCard.get() + STEP);
+        activeGameCard.set(HeroCarousel.activeGameCard.get() + STEP);
     }
 
     private void launchGame(GamePaginationItem selectedGame) {
