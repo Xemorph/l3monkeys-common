@@ -25,7 +25,7 @@ import javafx.scene.shape.Polygon;
 import javafx.scene.shape.Rectangle;
 
 public class HeroCarousel {
-
+    
     private static Logger LOGGER = new Logger(HeroCarousel.class);
 
     /**---------------------------------------------------------------------------------------------------------------------*/
@@ -134,7 +134,6 @@ public class HeroCarousel {
         this.arrow_right.addEventHandler(MouseEvent.MOUSE_CLICKED, this::slideRight);
 
         this.btn_play.setOnAction((event) -> {
-
         });
     }
 
