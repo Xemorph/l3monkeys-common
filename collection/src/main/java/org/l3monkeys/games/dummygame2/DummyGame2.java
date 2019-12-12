@@ -2,6 +2,7 @@ package org.l3monkeys.games.dummygame2;
 
 import org.l3monkeys.gameloader.GameInterface;
 
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 public class DummyGame2 extends Stage implements GameInterface {
@@ -17,13 +18,13 @@ public class DummyGame2 extends Stage implements GameInterface {
     }
 
     @Override
-    public String getGameThumbnailPath() {
-        return "13Monkeys_Wallpaper.jpg";
+    public Image getGameThumbnailImage() {
+        return new Image(Thread.currentThread().getContextClassLoader().getResourceAsStream("13Monkeys_Wallpaper.jpg"));
     }
 
     @Override
-    public String getGamePreviewPath() {
-        return "13Monkeys_Wallpaper.jpg";
+    public Image getGamePreviewImage() {
+        return new Image(Thread.currentThread().getContextClassLoader().getResourceAsStream("13Monkeys_Wallpaper.jpg"));
     }
 
     @Override

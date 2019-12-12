@@ -8,7 +8,7 @@ public class GamePaginationItem extends PaginationItem {
     private GameInterface gameInterface;
 
     public GamePaginationItem(GameInterface gameInterface) {
-        super(gameInterface.getGameThumbnailPath());
+        super(gameInterface.getGameThumbnailImage());
         this.gameInterface = gameInterface;
     }
 

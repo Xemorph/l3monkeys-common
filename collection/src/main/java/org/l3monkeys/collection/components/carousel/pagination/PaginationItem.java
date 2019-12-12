@@ -25,20 +25,19 @@ public class PaginationItem extends StackPane {
     //  Public Static Variables
     /** --------------------------------------------------------------------------------------------------------------------- */
     private int refGameCardId;
-    // Private section
-    private StringProperty gamecardImage;
     /**---------------------------------------------------------------------------------------------------------------------*/
     // Variables
     /**---------------------------------------------------------------------------------------------------------------------*/
     private static int _instanceCounter = 0;
 
+    private Image thumbnailImage;
+
     /**---------------------------------------------------------------------------------------------------------------------*/
     // Constructors
     /**---------------------------------------------------------------------------------------------------------------------*/
     // Default constructor which gets executed by JavaFX
-    public PaginationItem(@NamedArg("gamecardImage") String gamecardImage) {
-        // Set GameCardImage path to local variable
-        this.gamecardImage = new SimpleStringProperty(this, "gamecardImage", gamecardImage);
+    public PaginationItem(Image thumbnailImage) {
+        this.thumbnailImage = thumbnailImage;
 
         try {
             // Load the custom made Component
@@ -74,7 +73,7 @@ public class PaginationItem extends StackPane {
         // Clip GameCardImage to the PaginationItem
         Rectangle shape = new Rectangle(80.0, 40.0);
         //System.out.println("[Debug] Path: " + Thread.currentThread().getContextClassLoader().getResource("testBG.png").toExternalForm());
-        shape.setFill(new ImagePattern(new Image(Thread.currentThread().getContextClassLoader().getResourceAsStream(this.gamecardImage.get()))));
+        shape.setFill(new ImagePattern(thumbnailImage));
         Pane innerPane = new Pane(shape);
         //Clip
         final Rectangle outputClip = new Rectangle();

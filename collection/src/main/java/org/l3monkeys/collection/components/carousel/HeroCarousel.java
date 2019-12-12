@@ -128,6 +128,7 @@ public class HeroCarousel {
         
         for (GameInterface gameInterface : gameInterfaces) {
             GamePaginationItem paginationItem = new GamePaginationItem(gameInterface);
+
             gamePagination.add(paginationItem);
             heroCarouselHolder.getChildren().add(paginationItem);
         }
@@ -147,7 +148,7 @@ public class HeroCarousel {
             activePagination.setActive();
 
             GameInterface gameInterface = activePagination.getGameInterface();
-            Image gamePreviewImage = new Image(Thread.currentThread().getContextClassLoader().getResourceAsStream(gameInterface.getGamePreviewPath()));
+            Image gamePreviewImage = gameInterface.getGamePreviewImage();
             backgroundPreview.setImage(gamePreviewImage);
         }
     }
