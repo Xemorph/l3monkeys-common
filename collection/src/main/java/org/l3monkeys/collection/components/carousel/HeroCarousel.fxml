@@ -16,6 +16,8 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.shape.SVGPath?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.control.Button?>
+<?import java.net.URL?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="940.0" style="-fx-background-color: #18191c;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>    
@@ -141,6 +143,7 @@
                   </ImageView>
                   <Rectangle fx:id="lgLR" fill="DODGERBLUE" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="840.0" StackPane.alignment="TOP_CENTER" />
                   <Rectangle fx:id="lgTB" fill="#1f93ff" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="840.0" StackPane.alignment="BOTTOM_CENTER" />
+                  <JFXButton fx:id="btn_play" text="Play" StackPane.alignment="BOTTOM_RIGHT" />
                </children>
             </StackPane>
          </center>
@@ -149,4 +152,7 @@
          </left>
       </BorderPane>
    </children>
+   <stylesheets>
+      <URL value="@HeroCarousel.css" />
+   </stylesheets>
 </AnchorPane>

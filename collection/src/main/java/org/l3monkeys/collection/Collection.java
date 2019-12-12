@@ -92,6 +92,24 @@ public class Collection extends Application {
                 }
             }.apply(getClass().getResource("components/carousel/HeroCarousel.fxml")));
 
+            controller.addScreen("launch", new Function<URL, Parent>() {
+                @Override
+                public Parent apply(URL input) {
+                    Parent view = null;
+                    try {
+                        view = FXMLLoader.load(input);
+                        // Make application window draggable again
+                        draggableWindow(stage, view);
+                    } catch (IOException exc) {
+                        exc.printStackTrace();
+                        // Logging the Exception
+                        LOGGER.error("FXML 'Launch' cannot be loaded!", exc);
+                        System.exit(-1);
+                    }
+                    return view;
+                }
+            }.apply(getClass().getResource("components/game/gamePane.fxml")));
+
             // Scene is not visible yet, so staged it to the provided Stage by the JavaFX-Framework
             stage.setScene(scene);
             // Add TaskIcon to our JavaFX-Application
