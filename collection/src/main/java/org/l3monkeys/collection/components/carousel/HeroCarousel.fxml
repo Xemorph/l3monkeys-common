@@ -4,7 +4,7 @@
 <?import java.lang.Double?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
-<?import javafx.scene.image.Image?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
@@ -16,10 +16,9 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.shape.SVGPath?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.control.Button?>
-<?import java.net.URL?>
+<?import org.l3monkeys.collection.components.base.WindowNavigation?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="940.0" style="-fx-background-color: #18191c;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="940.0" style="-fx-background-color: #18191c;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <children>    
       <Pane layoutX="-5.0" opacity="0.6" prefHeight="23.0" prefWidth="71.0">
          <children>
@@ -133,7 +132,7 @@
                   </ImageView>
                   <Rectangle fx:id="lgLR" fill="DODGERBLUE" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="840.0" StackPane.alignment="TOP_CENTER" />
                   <Rectangle fx:id="lgTB" fill="#1f93ff" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="840.0" StackPane.alignment="BOTTOM_CENTER" />
-                  <JFXButton fx:id="btn_play" minHeight="38.0" minWidth="96.0" prefHeight="38.0" prefWidth="96.0" style="-fx-border-radius: 3;" styleClass="btn_play" text="Play" textFill="WHITE">
+                  <JFXButton fx:id="btn_play" minHeight="38.0" minWidth="96.0" prefHeight="38.0" prefWidth="96.0" style="-fx-border-radius: 3;" styleClass="btn_play" text="Play" textFill="WHITE" translateX="120.0" translateY="320.0" StackPane.alignment="TOP_LEFT">
                      <font>
                         <Font name="Lato Medium" size="16.0" />
                      </font>
@@ -141,6 +140,11 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </JFXButton>
+                  <Label fx:id="lbl_gameTitle" text="Your Game Title" textFill="WHITE" translateX="120.0" translateY="100.0" StackPane.alignment="TOP_LEFT">
+                     <font>
+                        <Font name="Lato Heavy" size="24.0" />
+                     </font>
+                  </Label>
                </children>
             </StackPane>
          </center>

@@ -18,6 +18,7 @@ import javafx.beans.value.ObservableValue;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
@@ -44,6 +45,8 @@ public class HeroCarousel {
     @FXML private ImageView backgroundPreview;
     // Play Button
     @FXML private Button btn_play;
+    // Field for `getGameTitle`
+    @FXML private Label lbl_gameTitle;
     /*----------------------------------------------------------------------*\
                             Public Data Items
     \*----------------------------------------------------------------------*/
@@ -56,9 +59,7 @@ public class HeroCarousel {
     /*----------------------------------------------------------------------*\
                                 Constructor
     \*----------------------------------------------------------------------*/
-    public void HeroCarousel() {
-        // Do nothing here!
-    }
+    public HeroCarousel() { /* Do nothing here! */ }
     /*----------------------------------------------------------------------*\
                               Private Methods
     \*----------------------------------------------------------------------*/
@@ -80,9 +81,7 @@ public class HeroCarousel {
         loadGamesForPagination();
 
         activeGameCard.addListener(new ChangeListener<Number>() {
-
-            @Override
-            public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
+            @Override public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
                 if (oldValue != newValue) {
                     gamePagination.stream().forEach(e -> e.defaults());
                     update();
@@ -91,16 +90,9 @@ public class HeroCarousel {
         });
 
         ((StackPane) this.backgroundPreview.getParent()).heightProperty().addListener(new ChangeListener<Number>() {
-
-            @Override
-            public void changed(ObservableValue<? extends Number> observableVal, Number oldVal, Number newVal) {
-                // double transY = newVal.doubleValue()
-                //         - new Image(this.getClass().getClassLoader().getResourceAsStream("game_stud_rouge.png"))
-                //                 .getHeight();
+            @Override public void changed(ObservableValue<? extends Number> observableVal, Number oldVal, Number newVal) {
                 lgLR.setHeight(newVal.doubleValue());
                 lgTB.setHeight(newVal.doubleValue());
-                // lgTB.setHeight(lgTB.getHeight() - transY);
-                // lgTB.setTranslateY(-(transY / 2));
             }
         });
 
@@ -143,6 +135,8 @@ public class HeroCarousel {
             GameInterface gameInterface = activePagination.getGameInterface();
             Image gamePreviewImage = gameInterface.getGamePreviewImage();
             backgroundPreview.setImage(gamePreviewImage);
+            String gameTitle = gameInterface.getGameTitle();
+            lbl_gameTitle.setText(gameTitle);
         }
     }
     /*----------------------------------------------------------------------*\
