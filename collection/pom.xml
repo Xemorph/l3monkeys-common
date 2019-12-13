@@ -100,11 +100,18 @@
       <version>0.9.11</version>
     </dependency>
     <!-- Test section to include games via Maven -->
-    <dependency>
+    <!-- Game by Finn Brandes-->
+    <!--<dependency>
       <groupId>com.nystroem</groupId>
       <artifactId>prgprj.ws</artifactId>
       <version>1.0-SNAPSHOT</version>
-    </dependency>
+    </dependency>-->
+    <!-- Game by ${username}-->
+    <!--<dependency>
+      <groupId></groupId>
+      <artifactId></artifactId>
+      <version></version>
+    </dependency>-->
   </dependencies>
 
   <build>
