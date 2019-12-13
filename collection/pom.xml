@@ -99,6 +99,12 @@
       <artifactId>reflections</artifactId>
       <version>0.9.11</version>
     </dependency>
+    <!-- Test section to include games via Maven -->
+    <dependency>
+      <groupId>com.nystroem</groupId>
+      <artifactId>prgprj.ws</artifactId>
+      <version>1.0-SNAPSHOT</version>
+    </dependency>
   </dependencies>
 
   <build>
@@ -122,22 +128,21 @@
                 <goal>copy-dependencies</goal>
               </goals>
               <configuration>
-                <outputDirectory>${project.build.directory}/l3monkeys_collection/lib</outputDirectory>
+                <outputDirectory>${project.build.directory}/lib</outputDirectory>
                 <overWriteReleases>false</overWriteReleases>
-                <overWriteSnapshots>false</overWriteSnapshots>
-                <overWriteIfNewer>true</overWriteIfNewer>
+                <overWriteSnapshots>true</overWriteSnapshots>
               </configuration>
             </execution>
           </executions>
         </plugin>
         <plugin>
-          <!--<artifactId>maven-jar-plugin</artifactId>
-          <version>3.0.2</version> -->
-          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>maven-jar-plugin</artifactId>
+          <version>3.0.2</version>
+          <!--<groupId>org.codehaus.mojo</groupId>
           <artifactId>exec-maven-plugin</artifactId>
-          <version>1.2.1</version>
+          <version>1.2.1</version>-->
           <configuration>
-            <!-- <archive>
+            <archive>
               <manifest>
                 <addClasspath>true</addClasspath>
                 <classpathPrefix>lib/</classpathPrefix>
@@ -147,18 +152,18 @@
                 <Class-Path>.</Class-Path>
               </manifestEntries>
             </archive>
-            <finalName>l3monkeys_collection/l3monkeys_collection</finalName>-->
-            <executions>
+            <finalName>l3monkeys_collection</finalName>
+            <!--<executions>
               <execution>
                 <goals>
                   <goal>java</goal>
                 </goals>
               </execution>
             </executions>
-            <mainClass>org.l3monkeys.collection.Collection</mainClass>
+            <mainClass>org.l3monkeys.collection.Collection</mainClass>-->
           </configuration>
         </plugin>
-        <plugin>
+        <!--<plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-shade-plugin</artifactId>
           <version>3.0.0</version>
@@ -206,7 +211,7 @@
                 </configuration>
               </execution>
             </executions>
-          </plugin>
+          </plugin>-->
       </plugins>
     <resources>
       <resource>

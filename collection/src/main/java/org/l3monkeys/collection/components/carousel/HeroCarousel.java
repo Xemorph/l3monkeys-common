@@ -22,71 +22,47 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.StackPane;
 import javafx.scene.paint.LinearGradient;
 import javafx.scene.shape.Polygon;
 import javafx.scene.shape.Rectangle;
 
 public class HeroCarousel {
 
-    /**
-     * ---------------------------------------------------------------------------------------------------------------------
-     */
-    // FXML Components
-    /**
-     * ---------------------------------------------------------------------------------------------------------------------
-     */
-    @FXML
-    private JFXButton btn_library;
+    /*----------------------------------------------------------------------*\
+                            Private Data Items
+    \*----------------------------------------------------------------------*/
+    @FXML private JFXButton btn_library;
     // HeroCarousel holder
-    @FXML
-    private HBox heroCarouselHolder;
+    @FXML private HBox heroCarouselHolder;
     // HeroCarousel controls (<- & ->)
-    @FXML
-    private Polygon arrow_left;
-    @FXML
-    private Polygon arrow_right;
+    @FXML private Polygon arrow_left;
+    @FXML private Polygon arrow_right;
     // Visualization
-    @FXML
-    private Rectangle lgLR; // LinearGradient -> From LEFT to RIGHT
-    @FXML
-    private Rectangle lgTB; // LinearGradient -> From TOP to BOTTOM
-    @FXML
-    private ImageView backgroundPreview;
+    @FXML private Rectangle lgLR; // LinearGradient -> From LEFT to RIGHT
+    @FXML private Rectangle lgTB; // LinearGradient -> From TOP to BOTTOM
+    @FXML private ImageView backgroundPreview;
     // Play Button
-    @FXML
-    private Button playButton;
-
-    /**
-     * ---------------------------------------------------------------------------------------------------------------------
-     */
-    // Public Static Variables
-    /**
-     * ---------------------------------------------------------------------------------------------------------------------
-     */
+    @FXML private Button btn_play;
+    /*----------------------------------------------------------------------*\
+                            Public Data Items
+    \*----------------------------------------------------------------------*/
     public static IntegerProperty activeGameCard = new SimpleIntegerProperty(0);
     public static List<GamePaginationItem> gamePagination = new ArrayList<GamePaginationItem>();
-    /**
-     * ---------------------------------------------------------------------------------------------------------------------
-     */
-    // Constant
-    /**
-     * ---------------------------------------------------------------------------------------------------------------------
-     */
+    /*----------------------------------------------------------------------*\
+                            Private Data Items
+    \*----------------------------------------------------------------------*/
     private static final int STEP = 1;
-
-    /**
-     * ---------------------------------------------------------------------------------------------------------------------
-     */
-    // Constructor
-    /**
-     * ---------------------------------------------------------------------------------------------------------------------
-     */
+    /*----------------------------------------------------------------------*\
+                                Constructor
+    \*----------------------------------------------------------------------*/
     public void HeroCarousel() {
         // Do nothing here!
     }
-
-    @FXML
-    void initialize() {
+    /*----------------------------------------------------------------------*\
+                              Private Methods
+    \*----------------------------------------------------------------------*/
+    @FXML void initialize() {
 
         // Debug
         System.out.println("[Debug] HeroCarousel.activeGameCard: " + HeroCarousel.activeGameCard.get());
@@ -114,11 +90,25 @@ public class HeroCarousel {
             }
         });
 
+        ((StackPane) this.backgroundPreview.getParent()).heightProperty().addListener(new ChangeListener<Number>() {
+
+            @Override
+            public void changed(ObservableValue<? extends Number> observableVal, Number oldVal, Number newVal) {
+                // double transY = newVal.doubleValue()
+                //         - new Image(this.getClass().getClassLoader().getResourceAsStream("game_stud_rouge.png"))
+                //                 .getHeight();
+                lgLR.setHeight(newVal.doubleValue());
+                lgTB.setHeight(newVal.doubleValue());
+                // lgTB.setHeight(lgTB.getHeight() - transY);
+                // lgTB.setTranslateY(-(transY / 2));
+            }
+        });
+
         // Add Pagination navigation - Slide to the left / right
         this.arrow_left.addEventHandler(MouseEvent.MOUSE_CLICKED, this::slideLeft);
         this.arrow_right.addEventHandler(MouseEvent.MOUSE_CLICKED, this::slideRight);
 
-        this.playButton.setOnAction((event) -> {
+        this.btn_play.setOnAction((event) -> {
             GamePaginationItem selectedGame = gamePagination.get((HeroCarousel.activeGameCard.get() - 1));
             launchGame(selectedGame);
         });
@@ -141,14 +131,9 @@ public class HeroCarousel {
             heroCarouselHolder.getChildren().add(paginationItem);
         }
     }
-
-    /**
-     * ---------------------------------------------------------------------------------------------------------------------
-     */
-    // Methods
-    /**
-     * ---------------------------------------------------------------------------------------------------------------------
-     */
+    /*----------------------------------------------------------------------*\
+                              Public Methods
+    \*----------------------------------------------------------------------*/
     public void update() {
         // Get the 'PaginationItem' with the reference to the active GameCard
         if (HeroCarousel.activeGameCard.get() > 0 && !gamePagination.isEmpty()) {
@@ -160,7 +145,9 @@ public class HeroCarousel {
             backgroundPreview.setImage(gamePreviewImage);
         }
     }
-
+    /*----------------------------------------------------------------------*\
+                              Private Methods
+    \*----------------------------------------------------------------------*/
     private void slideLeft(MouseEvent event) {
         // Check if we already at the most left element
         if (HeroCarousel.activeGameCard.get() == 1)

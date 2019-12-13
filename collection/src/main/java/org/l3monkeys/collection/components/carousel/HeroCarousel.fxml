@@ -133,7 +133,14 @@
                   </ImageView>
                   <Rectangle fx:id="lgLR" fill="DODGERBLUE" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="840.0" StackPane.alignment="TOP_CENTER" />
                   <Rectangle fx:id="lgTB" fill="#1f93ff" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="840.0" StackPane.alignment="BOTTOM_CENTER" />
-                  <JFXButton fx:id="playButton" text="Play now" StackPane.alignment="BOTTOM_RIGHT" />
+                  <JFXButton fx:id="btn_play" minHeight="38.0" minWidth="96.0" prefHeight="38.0" prefWidth="96.0" style="-fx-border-radius: 3;" styleClass="btn_play" text="Play" textFill="WHITE">
+                     <font>
+                        <Font name="Lato Medium" size="16.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
                </children>
             </StackPane>
          </center>

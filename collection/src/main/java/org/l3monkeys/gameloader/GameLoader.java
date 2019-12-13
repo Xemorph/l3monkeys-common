@@ -5,10 +5,16 @@ import java.util.HashSet;
 import java.util.Set;
 
 import org.reflections.Reflections;
+import org.reflections.util.ClasspathHelper;
+import org.reflections.util.ConfigurationBuilder;
 
 public class GameLoader {
     public static Set<GameInterface> getGameInterfaces() {
-        Reflections reflections = new Reflections("org.l3monkeys");
+        //Reflections reflections = new Reflections("org.l3monkeys");
+        Reflections reflections = new Reflections(new ConfigurationBuilder()
+                                                        .setUrls(ClasspathHelper.forPackage("org.l3monkeys"))
+                                                        .addUrls(ClasspathHelper.forPackage("com.nystroem"))
+                                                 );
         Set<Class<? extends GameInterface>> gameClasses = reflections.getSubTypesOf(GameInterface.class);
 
         Set<GameInterface> gameInterfaces = new HashSet<GameInterface>();
@@ -21,6 +27,8 @@ public class GameLoader {
                 e.printStackTrace();
             }
         }
+
+        System.out.println("[Debug] Found " + gameInterfaces.size() + " games!");
 
         return gameInterfaces;
     }
